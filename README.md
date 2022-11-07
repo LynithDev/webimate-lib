@@ -7,6 +7,11 @@ A small (2061 bytes) SCSS and JavaScript library for your websites.
 - [x] Extensive
 - [x] No configuration required
 
+## Installation
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LynithDev/webimate-lib/dist/main.css">
+<script src="https://cdn.jsdelivr.net/gh/LynithDev/webimate-lib/dist/main.js" defer>
+```
 ## Usage
 Adding an animation to an element is quite simple. Simply add the `animate` class along with the name of your preferred animation (e.g. `fade`).
 You can also add any animation arguments such as `left` so the element can fade and slide from the left.
