@@ -2,10 +2,10 @@
 A small (2061 bytes) SCSS and JavaScript library for your websites.
 
 ## Features
-[x] Animation queuing
-[x] Create custom animations easily with SCSS
-[x] Extensive
-[x] No configuration required
+- [x] Animation queuing
+- [x] Create custom animations easily with SCSS
+- [x] Extensive
+- [x] No configuration required
 
 ## Usage
 Adding an animation to an element is quite simple. Simply add the `animate` class along with the name of your preferred animation (e.g. `fade`).
