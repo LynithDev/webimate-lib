@@ -1,0 +1,21 @@
+{
+    "buildOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "checkJs": true,
+        "lib": ["ES6", "dom"],
+        "module": "ES6",
+        "outDir": "dist",
+        "target": "ES6"
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src/**/*"]
+}

@@ -1,0 +1,43 @@
+@use "sass:string";
+@use "../variables" as *;
+
+@mixin animation($selector, $targets: ( "all" )) {
+    .#{$selector} {
+        $map: map-get($webimate, $selector);
+        transition: _createTransition(
+            $targets,
+            map-get($map, "duration"),
+            map-get($map, "delay"),
+            map-get($map, "easing")
+        );
+        @content;
+    }
+}
+
+@mixin arg($args) {
+    @each $arg in $args {
+        &.#{$arg} {
+            @content;
+        }
+    }
+}
+
+@mixin visible {
+    &.visible {
+        @content;
+    }
+}
+
+// Helper functions
+@function _createTransition($targets, $duration, $ease, $delay) {
+    $transition: ();
+    @each $target in $targets {
+        $transition: append($transition, string.unquote(
+            $target + " " + 
+            $duration + " " + 
+            $ease + " " + 
+            $delay 
+        ), "comma");
+    }
+    @return $transition;
+}

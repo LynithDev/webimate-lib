@@ -1,0 +1,26 @@
+$slide: () !default;
+$slide: map-merge(
+    (
+        transform: 30vw,
+        duration: 1000ms,
+        delay: 0s,
+        easing: ease-in-out,
+    ),
+    $slide
+);
+
+$fade: () !default;
+$fade: map-merge(
+    (
+        transform: 10vw,
+        duration: 1s,
+        delay: 0s,
+        easing: ease-in-out,
+    ),
+    $fade
+);
+
+$webimate: (
+    slide: $slide,
+    fade: $fade,
+);

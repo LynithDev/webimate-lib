@@ -1,0 +1,34 @@
+@use 'lib' as lib;
+@use '../variables' as *;
+
+@include lib.animation("fade", "opacity" "transform") {
+    opacity: 0;
+
+    @include lib.arg("left") {
+        transform: translateX(-1 * map-get($webimate, "fade", "transform"));
+    }
+
+    @include lib.arg("right") {
+        transform: translateX(map-get($webimate, "fade", "transform"));
+    }
+
+    @include lib.arg("top") {
+        transform: translateY(-1 * map-get($webimate, "fade", "transform"));
+    }
+
+    @include lib.arg("bottom") {
+        transform: translateY(map-get($webimate, "fade", "transform"));
+    }
+
+    @include lib.visible() {
+        opacity: 1;
+
+        @include lib.arg("left" "right") {
+            transform: translateX(0);
+        }
+
+        @include lib.arg("top" "bottom") {
+            transform: translateY(0);
+        }
+    }
+}
