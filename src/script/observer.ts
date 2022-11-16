@@ -5,8 +5,6 @@ export const queue: [number, Element][] = [];
 export const observer = new IntersectionObserver((entries) => {
     entries.sort((a, b) => getQueueIndex(a.target.className) - getQueueIndex(b.target.className));
 
-    console.log(entries.map((entry) => getQueueIndex(entry.target.className)).join('\n'));
-
     let queueIndex = 0;
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
